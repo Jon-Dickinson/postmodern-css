@@ -1,0 +1,41 @@
+
+.block-button {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  width: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  max-width: 190px;
+  line-height: 46px;
+  text-align: center;
+  color: #1193FF;
+  border: 2px solid #1193FF;
+}
+
+.block-button:hover {
+  color: #ffffff;
+  background-color: #1193FF;
+}
+
+.block-button--wide {
+  line-height: 68px;
+  max-width: 260px;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+.block-button--wide:hover {
+  border: 1px solid #ed0057;
+  background-color: rgba(237, 0, 80, 0.25);
+}
+
+.block-button--wide:active {
+  border: 1px solid #ed0057;
+  background-color: rgba(237, 0, 80, 0.85);
+}
+
+
+

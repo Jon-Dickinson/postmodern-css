@@ -1,0 +1,133 @@
+/*! utility classes intended for global use */
+
+
+/*  margins
+ ********************************************/
+
+.margin-tb-25 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.margin-x-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin-b-70p {
+  margin-bottom: 70px;
+}
+
+.margin--neg-10p {
+  margin: -10px;
+}
+
+/*  padding
+ ********************************************/
+
+.pad-15-0 {
+  padding: 15px 0;
+}
+
+.pad-0-20 {
+  padding: 0 20px;
+}
+
+/*  widths
+ ********************************************/
+
+.w-100perc {
+  width: 100%;
+}
+
+/*  max-widths
+ ********************************************/
+
+.max-w-1200 {
+  max-width: 1200px;
+}
+
+.max-w-768 {
+  max-width: 768px;
+}
+
+.max-w-520 {
+  max-width: 520px;
+}
+
+.max-w-560 {
+  max-width: 560px;
+}
+
+.max-w-50perc {
+  max-width: 50%;
+}
+
+.max-w-25perc {
+  max-width: 25%;
+}
+
+/*  borders
+ ********************************************/
+
+.border-2-magenta {
+  border: 3px solid magenta;
+}
+
+.border-2-cyan {
+  border: 3px solid #01B0F0;
+}
+
+.border-2-lime {
+  border: 3px solid #00c132;
+}
+
+/*  backgrounds
+ ********************************************/
+
+.bg-d8 {
+  background-color: rgba(100,100,100,0.2);
+}
+
+.bg-cyan {
+  background-color: #01B0F0;
+}
+
+.bg-magenta {
+  background-color: magenta;
+}
+
+/*  positioning
+ ********************************************/
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*  typography
+ ********************************************/
+
+p {
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-s-28p {
+  font-size: 28px;
+}
+
+
+.font-s-15p {
+  font-size: 15px;
+}
+
+.color--white {
+  color: #ffffff;
+}

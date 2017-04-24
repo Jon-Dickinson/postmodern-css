@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "RobotoDraft";
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/RobotoDraft.eot');
+    src: url('../fonts/RobotoDraft.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/RobotoDraft.woff2') format('woff'),
+    url('../fonts/RobotoDraft.ttf') format('truetype'),
+    url('../fonts/RobotoDraft.svg#RobotoDraft') format('svg');
+}
+
+@font-face {
+    font-family: "droid_sans_monoregular";
+    font-style: normal;
+    font-weight: 400;
+
+    src: url('../fonts/DroidSansMono-webfont.eot');
+    src: url('../fonts/DroidSansMono-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DroidSansMono-webfont.woff') format('woff'),
+    url('../fonts/DroidSansMono-webfont.ttf') format('truetype'),
+    url('../fonts/DroidSansMono-webfont.svg#droid_sans_monoregular') format('svg');
+}
+
+/** method 1 */
+
+.parent {
+    background-color: #d8d8d8;
+}
+
+.child-240p {
+    display: block;
+    float: left;
+    width: 240px;
+    height: auto;
+    margin: 10px;
+    padding: 20px 0;
+    background-color: #3992FD;
+}
+
+.child-50 {
+    display: block;
+    float: left;
+    width: 46%;
+    height: auto;
+    margin: 2%;
+    padding: 20px 0;
+    background-color: #3992FD;
+}
+
+/*
+ * clearfix: contain floats
+ *
+ * for modern browsers
+ * 1. the space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. the use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/** introduction of "micro clearfix" || 2011 */
+
+.cf:before { content: ""; display: table; }
+.cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+
+/** method 2a */
+
+.block-section {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.block-section__third-block {
+    position: relative;
+    display: block;
+    width: 33.33333%;
+    width: calc(100% / 3);
+}
+
+.block-section__half-block {
+    position: relative;
+    display: block;
+    width: 50%;
+}
+
+.block-section__full-block {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+/** method 2b */
+
+.iblock-section {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.iblock-section__third-iblock {
+    position: relative;
+    display: inline-block;
+    width: 33.33333%;
+    width: calc(100% / 3);
+}
+
+.iblock-section__half-iblock {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+}
+
+.iblock-section__full-iblock {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}

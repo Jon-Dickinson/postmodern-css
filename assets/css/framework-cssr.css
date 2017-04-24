@@ -1,0 +1,107 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    position: relative;
+    font-family: RobotoDraft, sans-serif;
+    color: #525252;
+    font-size: 100%;
+    line-height: 1.75;
+    background-color: #eeeeee;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body::after {
+    top: auto;
+    bottom: 0;
+}
+
+p {
+    font-size: 1em;
+    overflow-wrap: break-word;
+    text-align: justify;
+    margin: 0;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: #1193FF;
+}
+
+ul,
+ol {
+    max-width: 768px;
+    width: 100%;
+}
+
+ul li,
+ol li {
+    max-width: 768px;
+    line-height: 1.5;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #1ccba8;
+}
+
+.roboto-draft {
+    font-family: RobotoDraft;
+}
+
+xmp {
+    position: relative;
+    display: inline-block;
+    font-family: "Droid Sans Mono";
+    line-height: 20px;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    max-height: 600px;
+    padding: 15px 0;
+    background-color: #021032;
+}
+
+.html--dark-theme {
+    color: #38ff8e;
+    background-color: #021032;
+}
+
+.css--dark-theme {
+    color: cyan;
+    background-color: #021032;
+}
+
+
+.content__box-model,
+.content__box-model *,
+.content__box-model *:before,
+.content__box-model *:after {
+    box-sizing: content-box;
+}

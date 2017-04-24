@@ -1,0 +1,117 @@
+.mdl-card {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  background: #083b6d;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 400;
+  width: 330px;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.mdl-card_title {
+  box-sizing: border-box;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  color: #000000;
+  line-height: normal;
+  border-bottom: 1px solid #eeeeee;
+  perspective-origin: 165px 56px;
+  transform-origin: 165px 56px 0;
+}
+
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+
+.demo-card-wide > .mdl-card_title {
+  background: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  height: 176px;
+}
+
+.demo-card-wide > .mdl-card_menu {
+  color: #ffffff;
+}
+
+.mdl-card_title-text {
+  align-self: flex-end;
+  color: inherit;
+  display: flex;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+  overflow: hidden;
+  transform-origin: 149px 48px 0;
+}
+
+.mdl-card_subtitle-text {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+  margin: 0;
+}
+
+.mdl-card_supporting-text {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 1rem;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 16px;
+  text-align: left;
+  color: #ffffff;
+  width: 90%;
+}
+
+.mdl-card_actions {
+  background-color: #d90f48;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: normal;
+  padding: 8px;
+  width: 100%;
+  min-height: 68px;
+}
+
+.mdl-button {
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #eeeeee;
+  border-radius: 2px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  letter-spacing: 0;
+  line-height: 36px;
+  margin: 0;
+  min-width: 64px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 16px;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s,
+    background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  vertical-align: middle;
+  will-change: box-shadow;
+}
+
+.mdl-button:hover {
+  background-color: #ffffff;
+  color: #d90f48;
+}

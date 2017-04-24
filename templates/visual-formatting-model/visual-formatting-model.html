@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML focused front-end methodology">
+
+    <title>Visual Formatting Model | Box Model</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- initial base -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendor/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/restart.css"/>
+
+    <!-- typography -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/robotodraft.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/droid-sans-monoregular.css"/>
+
+    <!-- naming pattern -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/block.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/modifier.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/utility.css"/>
+
+    <!-- data attributes -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/data-attributes.css"/>
+
+    <!-- similar to framework.css -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/components/box-model.css"/>
+
+    <!-- media queries -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/media-queries.css"/>
+
+    <!-- modernizr -->
+    <script src="../../assets/js/modernizr.js"></script>
+
+</head>
+<body class="overflow-y-scr">
+    <div class="if_base-wrapper direction--column no-padding">
+        <div class="flex_mid-container direction--column max-w-600">
+
+            <div class="if_content-panel
+                        direction--column
+                        margin-tb-60
+                        w-100-perc">
+
+                <p class="font--s-2em color--white">
+                    Visual Formatting Model
+                </p>
+                <p class="color--white">
+                    The box model
+                </p>
+            </div>
+
+            <div class="if_content-panel
+                        direction--column
+                        pad-b-20
+                        w-100-perc">
+
+
+
+
+                <p class="if_content-panel margin-b-40 color--white">
+                    The visual formatting model transforms each element of a Web document into
+                    one or more boxes that conform to the CSS box model.
+                </p>
+
+                <p class="if_content-panel margin-b-40 color--white">
+                    Every box has a core structure that extends to a measurable edge or boundary.
+                    The dimensions of a box can be precisely defined or constrained.
+                    A box can be given a positioning scheme in combination with a specific
+                    layout mode.  These properties affect how a box interacts with surrounding boxes
+                    and how child elements interact.
+                </p>
+
+                <p class="if_content-panel margin-b-40 color--white">
+                    Box-sizing is a non-inherited property.
+                </p>
+
+<xmp class="color--cyan font--s-18">
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+* { implies: inherit; }
+
+</xmp>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="if_base-wrapper direction--column no-padding h-100vh">
+        <div class="flex_mid-container direction--column max-w-600">
+
+            <div class="if_content-panel direction--column pad-all-40 flex--1 max-w-600">
+                <p class="color--white margin-none">
+                    border-box
+                </p>
+                <p class="color--white margin-none">
+                    padding and border will be inside of the box
+                </p>
+            </div>
+
+            <div class="if_base-wrapper direction--column no-padding h-50vh bg-dark-blue min-h-220p border_box-model">
+                <div class="if_content-panel direction--column border-2px-actual-magenta bg-trans-green flex--1 max-w-450">
+                    <div class="if_content-panel direction--column margin-all-20 pad-all-20 border-2-white bg-brand-blue--faded z-index-200 flex--1">
+                        <div class="if_content-panel align--items-center justify--center bg-actual-magenta flex--1 pad-tb-10 ">
+                            <p class="margin-none color--white font--s-14"> box-sizing: border-box </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="if_content-panel direction--column pad-all-40 flex--1 max-w-600">
+                <p class="color--white margin-none">
+                    content-box
+                </p>
+                <p class="color--white margin-none">
+                    padding, border &amp; margin will be outside of the box
+                </p>
+            </div>
+
+            <div class="if_base-wrapper direction--column no-padding bg-dark-blue h-50vh min-h-220p content_box-model ">
+                <div class="if_content-panel direction--column border-2px-blue bg-trans-green flex--1 max-w-450">
+                    <div class="if_content-panel direction--column margin-all-20 pad-all-20 border-2px-blue bg-brand-blue--faded z-index-200 flex--1">
+                        <div class="if_content-panel align--items-center justify--center bg-brand-blue flex--1 pad-tb-10 border-2-white">
+                            <p class="margin-none color--white font--s-14"> box-sizing: content-box </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

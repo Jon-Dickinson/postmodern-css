@@ -1,0 +1,2754 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML focused front-end methodology | J Dickinson">
+
+    <title>HTML focused front-end methodology | CSSReactions</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- initial base -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendor/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/restart.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/framework.css"/>
+
+    <!-- typography -->
+    <link rel="stylesheet" type="text/css" href="assets/css/robotodraft.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/droid-sans-monoregular.css"/>
+
+    <!-- naming pattern -->
+    <link rel="stylesheet" type="text/css" href="assets/css/block.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/modifier.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/utility.css"/>
+
+    <!-- data attributes -->
+    <link rel="stylesheet" type="text/css" href="assets/css/data-attributes.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/icons.css"/>
+
+    <!-- components -->
+    <link rel="stylesheet" type="text/css" href="assets/css/components/reveal.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/components/gestalt.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/components/continuum.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/components/cssr-logo.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/components/buttons.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/components/cube.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/components/mdl-card.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/components/grid.css"/>
+
+    <!-- media queries -->
+    <link rel="stylesheet" type="text/css" href="assets/css/media-queries.css"/>
+
+    <!-- modernizr -->
+    <script src="assets/js/modernizr.js"></script>
+
+</head>
+<body>
+
+<div class="reveal_base-wrapper">
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- overview -->
+            <section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+
+                        <p class="font--s-24">
+                            A postmodern front-end web development approach
+                            that draws from opposite ends of the naming convention
+                            continuum, supporting function orientated naming
+                            and component based CSS.
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+                        <p class="t-align--l max-w-768 font--s-26 border-b-2px-white pad-b-10">
+                            Historical Context
+                        </p>
+                        <p class="font--s-22">
+                            CSS1 was introduced in 1996 as a simple method for adding presentational information while
+                            simultaneously separating it from structure and content.
+                        </p>
+
+<div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-860 parent-of-xmp">
+
+<xmp class="intro-html--dark-theme">
+<img width="300" height="200" src="../images/image.jpg">
+</xmp>
+
+</div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+                        <p class="t-align--l max-w-768 font--s-26 border-b-2px-white pad-b-10">
+                            W3C Recommendation for HTML2 - 1996
+                        </p>
+
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-860 parent-of-xmp">
+                        <p class="font--s-18">
+                            It is suggested that a style sheet similar to the one below is used as the User Agent default.
+                        </p>
+<xmp class="intro-html--dark-theme">
+BODY {
+    margin: 1em;
+    font-family: serif;
+    line-height: 1.1;
+    background: white;
+    color: black;
+}
+
+H1, H2, H3, H4, H5, H6, P, UL, OL, DIR, MENU, DIV,
+DT, DD, ADDRESS, BLOCKQUOTE, PRE, BR, HR, FORM, DL {
+    display: block
+}
+
+B, STRONG, I, EM, CITE, VAR, TT, CODE, KBD, SAMP,
+IMG, SPAN { display: inline }
+
+LI { display: list-item }
+
+H1, H2, H3, H4 { margin-top: 1em; margin-bottom: 1em }
+H5, H6 { margin-top: 1em }
+H1 { text-align: center }
+H1, H2, H4, H6 { font-weight: bold }
+H3, H5 { font-style: italic }
+
+H1 { font-size: xx-large }
+H2 { font-size: x-large }
+H3 { font-size: large }
+
+B, STRONG { font-weight: bolder }  /* relative to the parent */
+I, CITE, EM, VAR, ADDRESS, BLOCKQUOTE { font-style: italic }
+PRE, TT, CODE, KBD, SAMP { font-family: monospace }
+
+PRE { white-space: pre }
+
+ADDRESS { margin-left: 3em }
+BLOCKQUOTE { margin-left: 3em; margin-right: 3em }
+
+UL, DIR { list-style: disc }
+OL { list-style: decimal }
+MENU { margin: 0 }              /* tight formatting */
+LI { margin-left: 3em }
+
+DT { margin-bottom: 0 }
+DD { margin-top: 0; margin-left: 3em }
+
+HR { border-top: solid }        /* 'border-bottom' could also have been used */
+
+A:link { color: blue }          /* unvisited link */
+A:visited { color: red }        /* visited links */
+A:active { color: lime }        /* active links */
+
+/* setting the anchor border around IMG elements
+requires contextual selectors */
+
+A:link IMG { border: 2px solid blue }
+A:visited IMG { border: 2px solid red }
+A:active IMG { border: 2px solid lime }
+</xmp>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+
+                        <img class="pad-all-30" src="assets/images/se1.gif">
+                        <p class="font--s-22 t-align--c">
+                            This is a screen-shot of an IDE used twenty years ago.
+                        </p>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+
+                        <img class="pad-all-30" src="assets/images/1996.jpg">
+                        <p class="font--s-22 t-align--c">
+                            This is a screen-shot of a Website authored in 1995.
+                        </p>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+
+                        <img class="pad-all-30" src="assets/images/material-example-a.gif">
+                        <p class="font--s-22 t-align--c">
+                            This is a demonstration of how to implement
+                            a Material Design concept.
+                        </p>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+
+                        <div class="isolate">
+                            <div class="viewport">
+                                <div class="cube">
+                                    <div class="first-side"></div>
+                                    <div class="second-side"></div>
+                                    <div class="third-side"></div>
+                                    <div class="fourth-side"></div>
+                                    <div class="fifth-side"></div>
+                                    <div class="sixth-side"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+                        <p class="t-align--l max-w-768 font--s-26 border-b-2px-white pad-b-10">
+                            Postmodern Context
+                        </p>
+                        <p class="font--s-22">
+                            The same type of thinking that was applied twenty years ago,
+                            is still present in modern front-end development.
+                        </p>
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- introductory concepts -->
+            <section>
+
+                <section>
+
+                    <div class="if_content-panel direction--row
+                                align--items-center
+                                w-100-perc max-w-400">
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-center
+                                    justify--center margin-all-40
+                                    min-h-200p bg-orange-fun
+                                    mdl-shadow--2dp">
+                            <span class="font--s-4em color--white icon-front-end front-end-icon-looks"> </span>
+                        </div>
+                    </div>
+                    <div class="if_content-panel direction--row
+                                align--items-center justify--space-between
+                                w-100-perc max-w-860">
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-center
+                                    justify--center pad-all-10">
+                            <p class="t-align--c
+                                      color--white
+                                      margin-none
+                                      font--s-26
+                                      spacing--3
+                                      text-trans--uppercase">
+                                Introductory Concepts
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+                        <p class="t-align--l font--s-26 border-b-2px-white pad-b-10">
+                            Postmodernism
+                        </p>
+                        <p class="font--s-22">
+                            Postmodernism can be defined as a reaction to or the questioning of the master narratives that create the
+                            relative context we find ourselves in.
+                        </p>
+                        <p class="font--s-22">
+                            Contrary to the trend of using one CSS naming convention within a codebase,
+                            this discussion offers an explanation of how two naming conventions can work
+                            congruently.
+                        </p>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+                        <p class="t-align--l font--s-26 border-b-2px-white pad-b-10">
+                            CSS is authored for two reasons
+                        </p>
+                        <p>
+                            To build components that contain various content types.
+                        </p>
+                        <p class="pad-b-10">
+                            To build the layout that contains and positions these components.
+                        </p>
+
+                        <div class="if_content-panel direction--row align--items-center
+                                    w-100-perc max-w-768 pad-all-20 bg-trans-green border-2px-green">
+
+                            <div class="flex--1 direction--column align--items-center border-2px-green
+                                        justify--center margin-all-20 min-h-120p bg-trans-green
+                                        mdl-shadow--2dp">
+                            </div>
+
+                            <div class="flex--1 direction--column align--items-center border-2px-green
+                                        justify--center margin-all-20 min-h-120p bg-trans-green
+                                        mdl-shadow--2dp">
+                            </div>
+
+                            <div class="flex--1 direction--column align--items-center border-2px-green
+                                        justify--center margin-all-20 min-h-120p bg-trans-green
+                                        mdl-shadow--2dp">
+                            </div>
+
+                            <div class="flex--1 direction--column align--items-center border-2px-green
+                                        justify--center margin-all-20 min-h-120p bg-trans-green
+                                        mdl-shadow--2dp">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-800">
+                        <p class="t-align--l font--s-26 border-b-2px-white pad-b-10">
+                            The interaction between the naming conventions
+                        </p>
+                        <p class="t-align--l font--s-22">
+                            The combination of component based and function
+                            based naming conventions allows one
+                            to customize default component styles by adding function
+                            based classes to component based classes.
+                        </p>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-800 parent-of-xmp">
+
+<xmp class="intro-html--dark-theme">
+<div class="component functional--class functional--class"> </div>
+</xmp>
+
+                    </div>
+
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--row align--items-center justify--center bg-transparent-light w-100-perc max-w-800">
+                        <p class="flex--1 t-align--c margin-b-0">B_E__M</p>
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-center
+                                    justify--center margin-all-20
+                                    min-h-100p bg-orange-fun">
+                            <p class="transform-center t-align--c">B_E__M</p>
+                        </div>
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-center
+                                    justify--center margin-all-20
+                                    min-h-100p bg-orange-fun">
+                            <p class="transform-center t-align--c">B_E__M</p>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+                        <p class="t-align--l font--s-22 border-b-2px-white pad-b-10">
+                            The BEM naming convention is a content dependant naming pattern
+                        </p>
+                        <p class="margin-t-10">
+                            Components can be reused.
+                        </p>
+                        <p class="">
+                            CSS classes used within a component cannot be reused.
+                        </p>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-start justify--center w-100-perc max-w-768">
+
+                        <p class="t-align--l max-w-768 font--s-22 border-b-2px-white pad-b-10">
+                            Function Based CSS is a content independent naming pattern
+                        </p>
+
+                        <p class="margin-b-20 t-align--l max-w-768 font--s-22">
+                            Function based classes are generally comprised of one or two properties
+                            and derive a class name based on the value of these properties.
+                        </p>
+
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768 parent-of-xmp margin-b-20">
+
+<xmp class="intro-html--dark-theme">.max-width-400 {
+    max-width: 400px;
+}
+</xmp>
+
+                        </div>
+
+
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-start justify--center w-100-perc max-w-768">
+
+                        <p class="t-align--l max-w-768 font--s-26 border-b-2px-white pad-b-10">
+                            Reusable CSS
+                        </p>
+
+                        <p class="margin-b-20 t-align--l max-w-768 font--s-20  pad-b-10">
+                            If a specification document stipulated that 5 types of button
+                            with 3 different sizes are required
+                            to satisfy the project requirements:
+                        </p>
+
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-start
+                                    justify--center pad-b-40 max-w-768">
+
+                            <ul class="t-align--l font--s-18 list-type--square">
+
+                                <li>
+                                    Using a 'multi-class' pattern one would need 9 classes
+                                </li>
+
+                                <li>
+                                    Using a 'single-class' pattern one would need 24 classes
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-860 parent-of-xmp">
+
+<xmp class="intro-html--dark-theme margin-t-20"><button class="button"></button>
+
+<button class="button button-type-a"></button>
+<button class="button button-type-b"></button>
+<button class="button button-type-c"></button>
+<button class="button button-type-d"></button>
+<button class="button button-type-e"></button>
+
+<button class="button button-type-a size--small">  </button>
+<button class="button button-type-a size--medium"> </button>
+<button class="button button-type-a size--large">  </button>
+</xmp>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-700">
+                        <p class="font--s-24">
+                            "The most reusable components are those with class names that are independent of the content."
+                        </p>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+                        <p class="t-align--l max-w-768 font--s-26 border-b-2px-white pad-b-10">
+                            W3C CSS Design Principles
+                        </p>
+                        <p class="pad-b-10">
+                            The W3C release design principles that identify the standard application of CSS.
+                            Two of these principles are added to the postmodern approach.
+                        </p>
+
+                        <ul class="t-align--l font--s-18 list-type--square">
+
+                            <li>
+                                Multiple Web documents can reference the same external style sheet.
+                            </li>
+
+                            <li>
+                                The ability to cascade style information is a key feature of CSS.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column
+                                w-100-perc max-w-768">
+
+                        <p class="margin-b-30 t-align--l max-w-768 font--s-26 pad-b-10">
+                            The principles of the cascade and the inheritance of  style <br> rules are constantly revised and updated by the W3C.
+                        </p>
+
+                        <div class="flex--1 margin-tb-20 100-perc pad-all-30 bg-transparent-light">
+                            <p class="t-align--l font--s-20">CSS3 module: Cascading and inheritance</p>
+                            <p class="t-align--l font--s-14">W3C Working Draft 19 February 2002</p>
+                        </div>
+
+                        <div class="flex--1 margin-tb-20 w-100-perc pad-all-30 bg-transparent-light">
+                            <p class="t-align--l font--s-20">CSS Cascading and Inheritance Level 4</p>
+                            <p class="t-align--l font--s-14">W3C Candidate Recommendation, 14 January 2016</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--row align--items-center justify--space-between w-100-perc max-w-600">
+
+                        <div class="if_content-panel direction--column align--items-center justify--space-between w-100-perc">
+
+                            <p class="t-align--c font--s-20">
+                                All elements within a view form part of a system.
+                            </p>
+
+                            <a class="block-button block-button--wide" href="templates/system/system.html" target="_blank">demo</a>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- W3C -->
+            <section>
+
+                <section>
+
+                    <div class="if_content-panel direction--row
+                                align--items-center justify--space-around
+                                w-100-perc max-w-400">
+
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-center
+                                    justify--center margin-all-40
+                                    min-h-200p bg-brand-blue
+                                    mdl-shadow--2dp">
+
+                            <span class="font--s-4em color--white icon-category icon-gavel"> </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="if_content-panel direction--row
+                                align--items-center justify--center
+                                w-100-perc max-w-860">
+
+                        <p class="t-align--c">
+
+                            The manner in which the UI is built and the layout of a view is structured,
+                            should echo the principles of the visual formatting modal.
+
+                            Establishing properly formatted containing blocks as a basis for all structure,
+                            increases browser compatibility and structural predictability.
+
+                        </p>
+
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768">
+
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc bg-transparent-light pad-all-20 pad-lr-40">
+                            <p class="margin-tb-40 t-align--l font--s-2em">World Wide Web Consortium</p>
+
+                            <p class="">
+                                The World Wide Web Consortium (W3C) develop and standardize the Web Platform for application development.
+                            </p>
+                        </div>
+
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc bg-white pad-all-40">
+                            <a class="align-self--start" href="https://www.w3.org/TR/css-ui-3/" target="_blank">CSS Basic User Interface Module Level 3</a>
+                            <a class="align-self--start margin-t-10" href="https://test.csswg.org/harness/results/css-ui-3_dev/grouped/" target="_blank">CSS Basic User Interface Module Level 3 CR Test Suite Results</a>
+                            <a class="align-self--start margin-t-10" href="https://test.csswg.org/harness/details/css-ui-3_dev/box-sizing-001/engine/presto/" target="_blank">Opera Mini: Fails Test</a>
+                            <a class="align-self--start margin-t-10" href="https://test.csswg.org/harness/test/css-ui-3_dev/single/box-sizing-001/format/html5/" target="_blank">W3C Actual Test</a>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768">
+
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc bg-transparent-light pad-all-20 pad-lr-40">
+                            <p class="margin-tb-40 t-align--l font--s-2em"> Test Suite Result Details</p>
+
+                            <p class="">
+                                Opera 12.16 (Presto 2.12.423) on Android failed the test
+                            </p>
+                        </div>
+
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc bg-white pad-all-40">
+                            <p class="color--body">
+                                Results indicate that Opera Mini uses Content-Box as the method of box-sizing.
+                                If the CSS is based on Border-Box, then Opera Mini would continue to use
+                                Content-Box to visually format the HTML.  This would cause
+                                images or content to overlap each other or background colours to overlap content areas...
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-960">
+
+                         <img class="wide-image" src="assets/images/box-sizing.jpg">
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel
+                                direction--row
+                                align--items-center
+                                justify--space-between
+                                w-100-perc">
+
+                        <div class="if_content-panel
+                                    direction--column
+                                    align--items-center
+                                    justify--center
+                                    margin-all-20
+                                    w-100-perc">
+
+                            <p class="t-align--c
+                                      font--s-16
+                                      margin-all-20
+                                      pad-all-20
+                                      bg-brand-blue
+                                      color--white">
+
+                                The W3C Web Standards
+                            </p>
+
+                        </div>
+
+
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc pad-lr-20 margin-all-20 color--white max-w-768">
+
+                            <p class="t-align--c font--s-16 margin-all-20 pad-all-20 bg-brand-blue">
+
+                                The Visual Formatting Model
+                            </p>
+
+                            <p class="t-align--c font--s-16 margin-all-20 pad-all-20 bg-brand-blue">
+
+                                CSS design principles
+                            </p>
+
+                        </div>
+
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc pad-lr-20 margin-all-20 box-shadow-4 bg-white-01 color--white max-w-768">
+
+                            <p class="t-align--c
+                                      font--s-16
+                                      pad-all-20
+                                      margin-all-20
+                                      bg-brand-blue">
+
+                                Box generation
+                            </p>
+
+                            <p class="t-align--c
+                                      font--s-16
+                                      margin-all-20
+                                      pad-all-20
+                                      bg-brand-blue">
+
+                                Layout Mode
+                            </p>
+
+                            <p class="t-align--c
+                                      font--s-16
+                                      pad-all-20
+                                      margin-all-20
+                                     bg-brand-blue">
+
+                                Positioning scheme
+                            </p>
+
+                            <p class="t-align--c
+                                      font--s-16
+                                      pad-all-20
+                                      margin-all-20
+                                     bg-brand-blue">
+
+                                Flow
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--center
+                                w-100-perc
+                                max-w-768
+                                pad-all-30
+                                bg-brand-blue
+                                color--white">
+
+                        <p class="margin-none">
+                            The W3C oversee the development of Web technology standards
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768 pad-all-30 bg-white-01">
+
+                        <p class="">
+                            The W3C have defined a universe of rules that govern the relationship between
+                            all the CSS properties and how they are visually formatted.
+
+                            The fundamental rules of the Visual Formatting Model act as a point of departure for this discussion.
+                        </p>
+
+                    </div>
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--space-between
+                                w-100-perc">
+
+                        <div class="if_content-panel
+                                    direction--column
+                                    align--items-center
+                                    justify--center
+                                    w-100-perc
+                                    max-w-768
+                                    pad-all-30
+                                    bg-brand-blue
+                                    color--white">
+
+                            <p class="margin-none">
+                                The Visual Formatting Model
+                            </p>
+                        </div>
+                        <div class="if_content-panel direction--column justify--center w-100-perc max-w-768 pad-all-30 bg-white-01">
+                            <p class="margin-b-20">
+                                The visual formatting model
+                                is an algorithm that processes a document and displays it on visual media.
+
+                                During this process, each element within the document tree
+                                generates zero or more boxes,
+                                according to the box model.
+                            </p>
+                            <p class="margin-b-20">
+                                A box is rendered by the model in relation to the edge of its containing block.
+                                Once rendered, a box establishes itself as a containing block for its descendants.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--center
+                                w-100-perc
+                                max-w-768
+                                pad-all-30
+                                bg-brand-blue
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            Visual Formatting Model: <br>
+                            Box Generation
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column justify--center w-100-perc max-w-768 pad-all-30 bg-white-01">
+                        <p class="margin-b-20">
+
+                            Different types of boxes can be generated
+                            depending on the value of the display CSS property.
+
+                            The box type affects how the visual formatting is performed.
+
+                        </p>
+                        <p class="margin-b-20">
+                            When the value of a box's CSS display property is declared,
+                            the element is said to be at block-level.
+                        </p>
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-860 parent-of-xmp-on-white-1">
+
+<xmp class="html--dark-theme">.flex-wrapper {
+    display: flex;
+}
+</xmp>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--center
+                                w-100-perc
+                                max-w-768
+                                pad-all-30
+                                bg-brand-blue
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            Layout Mode
+                        </p>
+
+                    </div>
+                    <div class="if_content-panel direction--column justify--center w-100-perc max-w-768 pad-all-30 bg-white-01 table--borders">
+                        <p>
+                            A CSS layout mode, sometimes abbreviated as layout, is an algorithm determining
+                            the position and the size of boxes based on the way they interact with their sibling and ancestor boxes.
+                            There are several of them:
+                        </p>
+
+                        <span class="color--body">The table layout</span>
+                        <span class="color--body">The block layout</span>
+                        <span class="color--body">The inline layout</span>
+                        <span class="color--body">The flexible box layout</span>
+                        <span class="color--body">The grid layout</span>
+
+                    </div>
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--center
+                                w-100-perc
+                                max-w-768
+                                pad-all-30
+                                bg-brand-blue
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            Positioning schemes
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column justify--center w-100-perc max-w-768 pad-all-30 bg-white-01">
+                        <p class="margin-b-20">
+                            After the boxes are generated, they are positioned.
+                        </p>
+
+                        <ul class="t-align--l font--s-18 list-type--square">
+
+                            <li>
+                                the static / relative positioning scheme.
+                            </li>
+
+                            <li>
+                                the absolute / fixed positioning scheme removes elements entirely from the document flow.
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--center
+                                w-100-perc
+                                max-w-768
+                                pad-all-30
+                                bg-brand-blue
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            The Flow
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column justify--center w-100-perc max-w-768 pad-all-30 bg-white-01">
+                        <p class="margin-b-20">
+                            The normal flow positions each box one after the other.
+                            The floats algorithm extracts the box from the normal flow and
+                            put it to the side of the containing box.
+                        </p>
+
+                        <p>
+                            Elements belonging to the flow content category typically contain text or embedded content.
+                        </p>
+
+                        <p class="margin-b-20">
+                            The normal flow is triggered:
+                        </p>
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-860 parent-of-xmp-on-white-1">
+
+<xmp class="intro-html--dark-theme margin-b-20">.normal-flow {
+    position: relative / static;
+    float: none;
+}
+</xmp>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--center
+                                w-100-perc
+                                max-w-768
+                                pad-all-30
+                                bg-mint-green
+                                color--white">
+
+                        <p class="font--s-20 margin-none">
+                            Combining these fundamental principles into a class
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column justify--center w-100-perc max-w-768 pad-all-30 bg-white-01">
+                        <p>
+                            The properties of this containing block create a solid foundation from which
+                            to control the position, style and structure of the internal child elements.
+                        </p>
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-860 parent-of-xmp-on-white-1">
+<xmp class="html--dark-theme">.containing-block {
+    box-model: border-box;
+    position: relative;
+    display: flex;
+}
+</xmp>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--row align--items-center justify--space-between w-100-perc ">
+
+                        <div class="if_content-panel direction--column align--items-center justify--space-between w-100-perc max-w-768">
+                            <a class="block-button block-button--wide" href="templates/visual-formatting-model/visual-formatting-model.html" target="_blank">Visual Format</a>
+                            <a class="block-button block-button--wide" href="templates/visual-formatting-model/containing-block.html" target="_blank">Containing block</a>
+                            <a class="block-button block-button--wide" href="templates/visual-formatting-model/box-model.html" target="_blank">Box Model</a>
+                        </div>
+
+                        <p class="t-align--l font--s-20">
+                            A containing block that uses a positioning scheme, layout mode and the border-box model,
+                            create rules which contain and allow more control over child elements.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- component based approaches -->
+            <section>
+
+                <section>
+                    <div class="if_content-panel direction--row
+                                align--items-center justify--space-around
+                                w-100-perc max-w-400">
+
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-center
+                                    justify--center margin-all-40
+                                    min-h-200p bg-d500f9
+                                    mdl-shadow--2dp">
+                            <span class="font--s-4em color--white icon-front-end front-end-icon-donut_small"> </span>
+                        </div>
+
+                    </div>
+
+                    <div class="if_content-panel direction--row
+                                align--items-center justify--space-between
+                                w-100-perc max-w-860">
+
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-center
+                                    justify--center pad-all-10">
+
+                            <p class="t-align--c
+                                      color--white
+                                      margin-none">
+
+                                Object Orientated CSS should be applied to components.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--row align--items-center justify--space-between margin-all-40 w-100-perc max-w-860">
+
+                        <p class="t-align--c color--white margin-none">
+                            Component based design depends on the existence of a
+                            compatible context for independant components to
+                            be positioned, aligned and arranged in a manner
+                            such that the functions they serve are
+                            congruent with the layout and context they are used in.
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel
+                            direction--column
+                            align--items-center
+                            justify--center
+                            w-100-perc
+                            max-w-768
+                            pad-all-30
+                            bg-d500f9
+                            color--white
+                            mdl-shadow--2dp">
+
+                        <p class="font--s-18 margin-none">
+                            Material Design Lite (MDL) component based HTML
+                        </p>
+                    </div>
+
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--center
+                                w-100-perc
+                                max-w-768
+                                bg-white-01
+                                parent-of-xmp-on-white-1">
+
+<xmp class="html--dark-theme">
+  <div class="mdl-card mdl-shadow--2dp">
+      <div class="mdl-card_title">
+          <h2 class="mdl-card_title-text">Welcome</h2>
+      </div>
+      <div class="mdl-card_supporting-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Mauris sagittis pellentesque lacus eleifend lacinia...
+      </div>
+      <div class="mdl-card_actions mdl-card--border">
+          <a class="mdl-button
+                 mdl-button--colored
+                 mdl-js-button
+                 mdl-js-ripple-effect">
+              Get Started
+          </a>
+      </div>
+  </div>
+
+</xmp>
+
+                    </div>
+                </section>
+
+                <section>
+                    <div class="if_content-panel
+                            direction--column
+                            align--items-center
+                            justify--center
+                            w-100-perc
+                            max-w-768
+                            pad-all-30
+                            bg-d500f9
+                            color--white
+                            mdl-shadow--2dp">
+
+                        <p class="font--s-18 margin-none">
+                            Material Design Lite (MDL) component based CSS
+                        </p>
+                    </div>
+
+                    <div class="if_content-panel
+                                direction--row
+                                justify--center
+                                align--items-stretch
+                                w-100-perc
+                                max-w-768
+                                bg-white-01
+                                parent-of-xmp-on-white-1">
+
+<xmp class="css--dark-theme">.mdl-card {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    background: #35478C;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 330px;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.mdl-card_title {
+    box-sizing: border-box;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    color: #000000;
+    line-height: normal;
+    border-bottom: 1px solid #eeeeee;
+    perspective-origin: 165px 56px;
+    transform-origin: 165px 56px 0;
+}
+
+.demo-card-wide.mdl-card {
+    width: 512px;
+}
+
+.demo-card-wide > .mdl-card_title {
+    background: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    height: 176px;
+}
+
+.demo-card-wide > .mdl-card_menu {
+    color: #ffffff;
+}
+
+.mdl-card_title-text {
+    align-self: flex-end;
+    color: inherit;
+    display: flex;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0;
+    overflow: hidden;
+    transform-origin: 149px 48px 0;
+}
+
+.mdl-card_subtitle-text {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 14px;
+    margin: 0;
+}
+
+.mdl-card_supporting-text {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 1rem;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 16px;
+    text-align: left;
+    color: #ffffff;
+    width: 90%;
+}
+
+.mdl-card_actions {
+    background-color: rgba(255, 108, 0, 1);
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: normal;
+    padding: 8px;
+    width: 100%;
+    min-height: 68px;
+}
+
+.mdl-button {
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #eeeeee;
+    border-radius: 2px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 36px;
+    letter-spacing: 0;
+    line-height: 36px;
+    margin: 0;
+    min-width: 64px;
+    outline: none;
+    overflow: hidden;
+    padding: 0 16px;
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+    box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s,
+    background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    vertical-align: middle;
+    will-change: box-shadow;
+}
+
+/* from different stylesheet */
+.mdl-shadow--2dp {
+    box-shadow:
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+</xmp>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column
+                                justify--center align--items-center
+                                w-100-perc max-w-768">
+
+
+                        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card_title">
+                                <h2 class="mdl-card_title-text">Welcome</h2>
+                            </div>
+                            <div class="mdl-card_supporting-text">
+                                Lorem ipsum dolor sit amet, consec tetur adipi scing elit.
+                                Mauris sag it tis pellen tesque lacus elei fend lac inia...
+                            </div>
+                            <div class="mdl-card_actions mdl-card--border">
+                                <a class="mdl-button
+                                          mdl-button--colored
+                                          mdl-js-button
+                                          mdl-js-ripple-effect">
+                                    Get Started
+                                </a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- naming methodologies -->
+            <section>
+
+                <section>
+                    <div class="if_content-panel direction--row
+                                align--items-center justify--space-around
+                                w-100-perc max-w-400">
+
+
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-center
+                                    justify--center margin-all-40
+                                    min-h-200p bg-d90f48
+                                    mdl-shadow--2dp">
+
+                            <span class="font--s-4em color--white icon-front-end front-end-icon-format_shapes"> </span>
+                        </div>
+
+
+                    </div>
+
+                    <div class="if_content-panel direction--row
+                                align--items-center justify--space-between
+                                w-100-perc max-w-860">
+
+
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-center
+                                    justify--center pad-all-10">
+
+                            <p class="t-align--c
+                                      color--white
+                                      margin-none">
+
+                                 Function Orientated CSS should be used globally<br>
+                            </p>
+                        </div>
+
+
+                    </div>
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768 border-2px-d90f48
+                                pad-all-30 bg-d90f48--faded">
+
+                        <p class="margin-b-0 t-align--c color--white">
+                            Naming Methodologies
+                        </p>
+                    </div>
+
+                    <div class="if_content-panel direction--column align--items-center w-100-perc max-w-768">
+
+                        <div class="if_content-panel direction--column align--items-center
+                                    justify--center w-100-perc pad-tb-20 margin-b-20">
+
+                            <p class="t-align--c w-100-perc">continuum</p>
+
+                            <div class="continuum align--items-center direction--row justify--space-between margin-b-40">
+                                <div class="continuum-bar bg-fe7044">
+                                    <p class="desc t-align--l">Object Orientated</p>
+                                    <p class="desc t-align--r">Function Orientated</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768 border-2px-d90f48
+                                pad-all-30 bg-d90f48--faded">
+
+                        <p class="margin-none t-align--c color--white">
+                             Object Orientated Naming Conventions
+                        </p>
+                    </div>
+
+                    <div class="if_content-panel direction--column
+                                justify--center w-100-perc max-w-768
+                                pad-all-30 bg-white-01">
+
+                        <div class="if_content-panel direction--column align--items-center
+                                    justify--center w-100-perc pad-lr-40 pad-tb-20
+                                    border-silver bg-white-01 margin-b-20">
+
+                            <p class="t-align--c w-100-perc">Content Dependent</p>
+                            <div class="continuum align--items-center direction--row justify--space-between margin-b-40  w-100-perc">
+                                <div class="continuum-bar oo-continuum-bar bg-fe7044">
+                                    <p class="desc t-align--l">Object Orientated</p>
+                                </div>
+                            </div>
+                            <div class="ib_content-panel min-w-4p max-w-100 min-h-40p bg-pink transform-top-overlap-0"></div>
+
+                            <div class="if_content-panel direction--row align--items-center justify--center w-100-perc max-w-768 pad-all-30">
+                                <a class="margin-all-10" href="http://oocss.org/" target="_blank">OOCSS</a>
+                                <a class="margin-all-10" href="https://en.bem.info/methodology/" target="_blank">BEM</a>
+                                <a class="margin-all-10" href="https://smacss.com/" target="_blank">SMACSS</a>
+                            </div>
+
+                        </div>
+
+                        <p>
+                            OOCSS, BEM and SMACSS methodologies are theoretical abstractions.
+                            Each approach uses a slightly different framework of rules.
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <!-- OOCSS -->
+                <section>
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--center
+                                w-100-perc
+                                max-w-768
+                                pad-all-30
+                                bg-d90f48--faded
+                                border-2px-d90f48
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            OOCSS Standard Module Format
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768 pad-all-30 bg-white-01">
+                        <p>
+                            OOCSS introduced the concept of using classes instead of HTML tags
+                            to target elements, the idea of an external parent container
+                            and an internal container to provide structure for the remaining elements.
+                        </p>
+
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-860 parent-of-xmp-on-white-1">
+
+<xmp class="html--dark-theme"><div class="mod">
+    <div class="inner">
+        <div class="hd">head</div>
+        <div class="bd">body</div>
+        <div class="ft">foot</div>
+    </div>
+</div>
+</xmp>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SMACSS -->
+                <section>
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768 border-2px-d90f48
+                                pad-all-30 bg-d90f48--faded
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            SMACSS
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column
+                                justify--center w-100-perc max-w-768
+                                pad-all-30 bg-white-01">
+
+                        <p>
+                            The SMACSS methodology bases class naming conventions on five concepts:
+                        </p>
+
+                        <ul class="if_content-panel direction--row align--items-center margin-b-25 ">
+                            <li class="flex--1 no-padding bg-light-charcoal">base</li>
+                            <li class="flex--1 color--white no-padding bg-999">layout</li>
+                            <li class="flex--1 color--white no-padding bg-767a7a">module</li>
+                            <li class="flex--1 color--white no-padding bg-607D8B">state</li>
+                            <li class="flex--1 color--white no-padding bg-2980B9">theme</li>
+                        </ul>
+
+                        <p>
+                            <a href="https://smacss.com/book/" targe="_blank">SMACSS guidelines</a>
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <!-- BEM -->
+                <section>
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768 border-2px-d90f48
+                                pad-all-30 bg-d90f48--faded
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            B_E__M
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column
+                                justify--center w-100-perc max-w-768
+                                pad-all-30 bg-white-01">
+
+                        <p>
+                            BEM (Block, Element, Modifier) is a component-based approach.
+                            "The idea behind it is to divide the user interface into independent blocks."
+                        </p>
+
+                        <div class="flex_content-panel direction--column w-100-perc">
+                            <a class="t-align--l margin-tb-10" href="https://en.bem.info/methodology/quick-start/" target="_blank">BEM quick-start</a>
+                            <a class="t-align--l" href="https://en.bem.info/methodology/key-concepts/" target="_blank">BEM key-concepts</a>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- BEM -->
+                <section>
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center border-2px-d90f48
+                                w-100-perc max-w-768 pad-all-30 bg-d90f48--faded
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            B_E__M - is this an efficient methodology ?
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column
+                                justify--center w-100-perc max-w-768
+                                pad-all-30 bg-white-01">
+
+                        <p>
+                            "Let's say we need to modify the appearance of one of the library blocks.
+                            That doesn't require changing the CSS rules of the block in the library
+                            source code or copying the code at the project level.
+                            <span class="underline--text">We only need to create additional CSS rules for that block</span>
+                            at the project level."
+                        </p>
+
+                        <p>
+                            "Blocks can be moved around on a page, moved between pages or projects.
+                            The implementation of blocks as independent entities makes it possible
+                            to change their position on the page and ensures their proper functioning and appearance.
+                            Thus, the logo and the authorization form can be swapped around
+                            <span class="underline--text">without modifying the CSS or JavaScript</span> code of the blocks."
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768 border-2px-d90f48
+                                pad-all-30 bg-d90f48--faded
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            B_E__M
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column
+                                justify--center w-100-perc max-w-768
+                                pad-all-30 bg-white-01">
+
+                        <p>
+                            A Block is, "a logically and functionally independent page component,
+                            the equivalent of a component in Web Components".
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768 border-2px-d90f48
+                                pad-all-30 bg-d90f48--faded
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            B_E__M
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column
+                                justify--center w-100-perc max-w-768
+                                pad-all-30 bg-white-01">
+
+                        <p>
+                            The documentation within the BEM Website explains the conditions a block should and could exist in,
+                            the naming conventions that should apply and that a block is an independant entity.
+                            The documentation does not describe what CSS properties should be used for a Block, Element or Modifier.
+                         </p>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+                        <p class="t-align--l font--s-26 border-b-2px-white pad-b-10">
+                            B_E__M - Block
+                        </p>
+                        <p class="font--s-22">
+                            According to B_E__M methodology, any DOM node can be a block if it accepts a class name.
+                        </p>
+
+                        <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768
+                                pad-lr-30 pad-tb-20 bg-mint-green--faded border-2px-mint-green color--white">
+
+                            <p class="margin-none">
+                                The CSS properties of a 'Block' should be setup according to the W3C Visual Formatting Model
+                            </p>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column
+                                justify--center w-100-perc max-w-768">
+
+                        <p class="pad-all-5">Using the BEM Website header component as an example:</p>
+                        <img src="assets/images/bem-start-b.png">
+
+                    </div>
+
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768 border-2px-d90f48
+                                pad-all-30 bg-d90f48--faded
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            HTML of BEM header component
+                        </p>
+                    </div>
+
+                    <div class="if_content-panel direction--column
+                                justify--center w-100-perc max-w-768
+                                bg-white-01">
+
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-860 parent-of-xmp-on-white-1">
+
+<xmp class="html--dark-theme">
+  <div class="header">
+      <div class="header__layout"> </div>
+      <div class="search header__search i-bem"> </div>
+      <div class="header__menu">
+          <ul class="breadcrumbs header__breadcrumbs"></ul>
+          <ul class="nav"></ul>
+      </div>
+      <div class="header__toggle search-icon"> </div>
+  </div>
+
+</xmp>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768 border-2px-d90f48
+                                pad-all-30 bg-d90f48--faded
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            CSS of BEM header component
+                        </p>
+                    </div>
+
+                    <div class="if_content-panel direction--column
+                                justify--center w-100-perc max-w-768
+                                bg-white-01">
+
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-860 parent-of-xmp-on-white-1">
+
+<xmp class="css--dark-theme">
+  .header {
+      background: #052433;
+  }
+
+  .header__layout {
+      height: 70px;
+      position: relative;
+      white-space: nowrap;
+  }
+
+  .search {
+      height: 70px;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 160px;
+      z-index: 0;
+  }
+
+  .header__menu {
+
+  }
+
+      .breadcrumbs {
+          background: inherit;
+          font-size: 17px;
+          left: 111px;
+          padding: 0;
+          position: absolute;
+          top: 1px;
+          vertical-align: top;
+      }
+
+      .nav {
+          background: #ffffff;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          display: block;
+          font-size: 14px;
+          list-style: none;
+          margin: 0;
+          padding: 0 0 0 108px;
+          position: relative;
+          z-index: 1;
+      }
+
+  .header__toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+  }
+
+</xmp>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column align--items-center justify--space-between min-h-600p">
+                        <img class="wide-image margin-t-20"src="assets/images/bem-a.jpg">
+                    </div>
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column align--items-center justify--space-between min-h-600p">
+                        <img class="wide-image margin-t-20"src="assets/images/bem-b.jpg">
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column align--items-center justify--space-between min-h-600p">
+                        <img class="wide-image margin-t-20"src="assets/images/bem-c.jpg">
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column align--items-center justify--space-between min-h-600p">
+                        <img class="wide-image margin-t-20"src="assets/images/bem-d.jpg">
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column align--items-center justify--space-between min-h-600p">
+                        <img class="wide-image margin-t-20"src="assets/images/bem-e.jpg">
+                    </div>
+
+                </section>
+
+                <!-- Utility -->
+                <section>
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768 border-2px-d90f48
+                                pad-all-30 bg-d90f48--faded
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            Functional Naming Methodology
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column
+                                justify--center w-100-perc max-w-768
+                                pad-all-30 bg-white-01">
+
+                        <p>
+                            The other extreme of the naming continuum, is defined by utility based naming conventions
+                            such as <a href="https://amcss.github.io/" target="_blank">Attribute Modules for CSS</a>
+                            (AMCSS) and approaches that are
+                            <a href="http://www.jon.gold/2015/07/functional-css/">function based</a>.
+
+                            Functional approaches allow components to be built using more classes that
+                            apply one or two properties at one time to form a multi-class syntax.
+                            This approach does not create a dependency between parent and child elements.
+                            Child elements can exist in isolation.
+                        </p>
+                    </div>
+
+                </section>
+
+                <!-- Utility -->
+                <section>
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768 border-2px-d90f48
+                                pad-all-30 bg-d90f48--faded
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            Testing Functional Naming Methodology
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column
+                                justify--center w-100-perc max-w-768
+                                pad-all-30 bg-white-01">
+
+                        <p>
+                            I checked the performance of a site that uses a functional naming convention, with Google Page speed insights.
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column align--items-center justify--space-between min-h-600p">
+                        <img class="margin-t-20"src="assets/images/functional-a.jpg">
+                    </div>
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column align--items-center justify--space-between min-h-600p">
+                        <img class="margin-t-20"src="assets/images/functional-b.jpg">
+                    </div>
+                </section>
+
+                <section>
+                    <div class="if_content-panel direction--column align--items-center justify--space-between min-h-600p">
+                        <img class="margin-t-20"src="assets/images/functional-c.jpg">
+                    </div>
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--row align--items-center justify--space-between w-100-perc max-w-600">
+
+                        <div class="if_content-panel direction--column align--items-center justify--space-between w-100-perc">
+                            <a class="block-button block-button--wide" href="templates/clearfix/index.html" target="_blank">Clearfix History</a>
+                            <a class="block-button block-button--wide" href="templates/foundation/foundation-6.3.1.html" target="_blank">foundation 6.3.1</a>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- CSSR -->
+            <section>
+
+                <section>
+                    <div class="if_content-panel direction--row
+                                align--items-center justify--center
+                                w-100-perc max-w-400">
+
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-center
+                                    justify--center margin-all-40
+                                    min-h-200p bg-mint-green
+                                    mdl-shadow--2dp">
+
+                            <span class="font--s-4em color--white icon-category icon-widgets"> </span>
+                        </div>
+
+                    </div>
+
+                    <div class="if_content-panel direction--row
+                                align--items-center justify--space-between
+                                w-100-perc max-w-768">
+
+
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-center
+                                    justify--center pad-all-10">
+
+                            <p class="t-align--c font--s-26">
+                                A Postmodern approach
+                            </p>
+
+                            <p class="t-align--c font--s-18">
+                                The naming convention of CSS class names will determine the degree to which
+                                the classes can be reused. Encapsulating component based CSS with function based CSS,
+                                allows one to manipulate existing presentation,
+                                alter the layout of components and apply new structure without
+                                the need to author new CSS.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+
+                        <p class="t-align--l max-w-768 font--s-26 border-b-2px-white pad-b-10">
+                            Cascade and Inheritance
+                        </p>
+                        <ul class="t-align--l color--white max-w-768 margin-l-30 list-type--square">
+                            <li>The Cascade should be used to provide global styling to a view</li>
+                            <li class="margin-t-20">Components should reference component specific stylesheets</li>
+                            <li class="margin-t-20">Style sheets can be combined as per W3C standards</li>
+                        </ul>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column
+                                    align--items-center justify--center
+                                    w-100-perc">
+
+                        <div class="flex--1 max-w-650 margin-tb-20 w-100-perc pad-all-30 bg-mint-green--faded border-2px-mint-green">
+                            <p class="">Global stylesheets contain Function orientated reusable CSS</p>
+                            <p class="font--s-18 margin-b-10">'multi-class' syntax</p>
+                        </div>
+
+                        <div class="flex--1 max-w-650 margin-tb-20 w-100-perc pad-all-30 bg-d500f9--faded border-2px-d500f9">
+                            <p class="">Localized stylesheets contain Object orientated component CSS</p>
+                            <p class="font--s-18 margin-b-10">'single-class' syntax</p>
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-650">
+                        <p class="t-align--l font--s-26 border-b-2px-white pad-b-10">
+                            Component based CSS
+                        </p>
+
+                        <ul class="w-100-perc font--s-24 list-type--square t-align--l">
+                            <li>
+                                Build default versions of components
+                            </li>
+                        </ul>
+
+                        <p class="font--s-18">
+                            BEM naming conventions are applied
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-start justify--center w-100-perc max-w-650">
+                        <p class="t-align--l font--s-26 border-b-2px-white pad-b-10">
+                            Function based CSS
+                        </p>
+
+                        <ul class="w-100-perc font--s-24 list-type--square t-align--l">
+                            <li>
+                                Build the layout that contains components
+                            </li>
+                            <li>
+                                Applied as modifier classes to default components to suit the structural context
+                            </li>
+                        </ul>
+
+                        <p class="font--s-18">
+                            Function based classes are grouped into three categories that are based on BEM principles
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--space-between
+                                w-100-perc max-w-768">
+
+                        <div class="if_content-panel direction--column
+                                    align--items-center justify--center
+                                    w-100-perc pad-lr-20
+                                    margin-all-20
+                                    box-shadow-4
+                                    bg-white-01
+                                    color--white max-w-768">
+
+                            <p class="t-align--l
+                                      font--s-20
+                                      pad-all-20
+                                      margin-all-20
+                                      border-2px-orange">
+
+                                BEM Based Categorization
+                            </p>
+
+                            <p class="t-align--l
+                                      font--s-16
+                                      margin-all-20
+                                      pad-all-20
+                                      bg-mint-green--faded border-2px-mint-green">
+
+                                Block
+                            </p>
+
+                            <p class="t-align--l
+                                      font--s-16
+                                      pad-all-20
+                                      margin-all-20
+                                      bg-mint-green--faded border-2px-mint-green">
+
+                                Modifier
+                            </p>
+
+                            <p class="t-align--l
+                                      font--s-16
+                                      pad-all-20
+                                      margin-all-20
+                                      bg-mint-green--faded border-2px-mint-green">
+
+                                Utility
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--space-between
+                                w-100-perc max-w-768">
+
+                        <div class="if_content-panel
+                                    direction--column
+                                    align--items-center
+                                    justify--center
+                                    w-100-perc
+                                    pad-all-30
+                                    bg-mint-green--faded border-2px-mint-green
+                                    color--white">
+
+                            <p class="font--s-20 margin-none">
+                                Block level structural classes
+                            </p>
+                        </div>
+                        <div class="if_content-panel direction--column justify--center w-100-perc pad-all-30 bg-white-01">
+                            <p>
+                                Using the structure provided by the W3C visual formatting model,
+                                Block level classes provide a robust and compatible base.
+                            </p>
+                        </div>
+
+                        <div class="if_content-panel direction--column align--items-center justify--center bg-white-01 w-100-perc parent-of-xmp-on-white-1">
+<xmp class="html--dark-theme">  .containing-block {
+      box-model: border-box;
+      position: relative;
+      display: flex;
+  }
+
+</xmp>
+                        </div>
+
+                        <div class="if_content-panel direction--column align--items-center justify--center bg-white-01 w-100-perc parent-of-xmp-on-white-1">
+<xmp class="intro-html--dark-theme color--cyan">    <div class="containing-block">
+
+    </div>
+
+</xmp>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--space-between
+                                w-100-perc max-w-768">
+
+                        <div class="if_content-panel
+                                    direction--column
+                                    align--items-center
+                                    justify--center
+                                    w-100-perc
+
+                                    pad-all-30
+                                    bg-mint-green--faded border-2px-mint-green
+                                    color--white">
+
+                            <p class="font--s-20 margin-none">
+                                Modifier classes can be applied at Block level
+                            </p>
+                        </div>
+                        <div class="if_content-panel direction--column align--items-center justify--center bg-white-01 w-100-perc parent-of-xmp-on-white-1">
+<xmp class="html--dark-theme">
+  .justify--center {
+      justify-content: center;
+  }
+
+</xmp>
+                        </div>
+
+                        <div class="if_content-panel direction--column align--items-center justify--center bg-white-01 w-100-perc parent-of-xmp-on-white-1">
+<xmp class="intro-html--dark-theme color--cyan">   <div class="containing-block justify--center">
+
+   </div>
+
+</xmp>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--space-between
+                                w-100-perc max-w-768">
+
+                        <div class="if_content-panel
+                                    direction--column
+                                    align--items-center
+                                    justify--center
+                                    w-100-perc
+
+                                    pad-all-30
+                                    bg-mint-green--faded border-2px-mint-green
+                                    color--white">
+
+                            <p class="font--s-20 margin-none">
+                                Utility classes can be applied globally
+                            </p>
+                        </div>
+                        <div class="if_content-panel direction--column align--items-center justify--center bg-white-01 w-100-perc parent-of-xmp-on-white-1">
+<xmp class="html--dark-theme">
+  .background-999 {
+      background-color: #999999;
+  }
+
+  .transform-exact-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+</xmp>
+                        </div>
+
+                        <div class="if_content-panel direction--column align--items-center justify--center bg-white-01 w-100-perc parent-of-xmp-on-white-1">
+<xmp class="intro-html--dark-theme color--cyan">
+   <div class="containing-block justify--center background-999">
+     <span class="transform-exact-center"></span>
+   </div>
+
+</xmp>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768
+                                pad-lr-30 pad-tb-20 bg-transparent-light border-2-white color--white">
+
+                        <p class="margin-none">
+                            Web document setup
+                        </p>
+                    </div>
+
+
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc  max-w-768
+                                bg-white-01
+                                parent-of-xmp-on-white-1">
+<xmp class="html--dark-theme">
+  ├── normalize.css
+  ├── modernizr.css
+  │
+  │
+  │
+  │
+  │
+
+</xmp>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768
+                                pad-lr-30 pad-tb-20 bg-mint-green--faded border-2px-mint-green color--white">
+
+                        <p class="margin-none">
+                            Global Reusable Classes
+                        </p>
+                    </div>
+
+
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc  max-w-768
+                                bg-white-01
+                                parent-of-xmp-on-white-1">
+<xmp class="html--dark-theme">
+  │
+  ├── block.css
+  ├── modifier.css
+  ├── utility.css
+  ├── media-queries.css
+  │
+  │
+  │
+  │
+  │
+
+</xmp>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc max-w-768
+                                pad-lr-30 pad-tb-20 bg-d500f9--faded border-2px-d500f9 color--white">
+
+                        <p class="margin-none">
+                            Localized Component Styles
+                        </p>
+                    </div>
+
+                    <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc  max-w-768
+                                bg-white-01
+                                parent-of-xmp-on-white-1">
+
+
+<xmp class="html--dark-theme">
+  │
+  │
+  │
+  ├─────── component
+  │         └─ component.css
+  │
+  └─────── component
+            └─ component.css
+
+
+</xmp>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc">
+                        <div class="if_content-panel direction--column align--items-center justify--center">
+
+                            <p class="t-align--c font--s-2em">Duodecimal Grid Concept</p>
+
+                            <p class="t-align--c font--s-20">12 / X</p>
+
+                        </div>
+                        <div class="if_content-panel direction--row align--items-center justify--space-around w-100-perc max-w-1280 margin-tb-20 border-slate">
+
+                            <div class="flex--1 dot"> </div>
+
+                        </div>
+
+                        <div class="if_content-panel direction--row align--items-center justify--space-around w-100-perc max-w-1280 margin-tb-20 border-slate">
+
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+
+                        </div>
+
+                        <div class="if_content-panel direction--row align--items-center justify--space-around w-100-perc max-w-1280 margin-tb-20 border-slate">
+
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+
+                        </div>
+
+                        <div class="if_content-panel direction--row align--items-center justify--space-around w-100-perc max-w-1280 margin-tb-20 border-slate">
+
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+
+                        </div>
+
+                        <div class="if_content-panel direction--row align--items-center justify--space-around w-100-perc max-w-1280 margin-tb-20 border-slate">
+
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+
+                        </div>
+
+                        <div class="if_content-panel direction--row align--items-center justify--space-around w-100-perc max-w-1280 margin-tb-20 border-slate">
+
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc">
+                        <div class="if_content-panel direction--column align--items-center justify--center">
+
+                            <p class="t-align--c font--s-2em">Non-Duodecimal Grid Concept</p>
+
+                            <p class="t-align--c font--s-20">10 / X</p>
+
+                        </div>
+                        <div class="if_content-panel direction--row align--items-center justify--space-around w-100-perc max-w-1280 margin-tb-20 border-slate">
+
+                            <div class="flex--1 dot"> </div>
+
+                        </div>
+
+                        <div class="if_content-panel direction--row align--items-center justify--space-around w-100-perc max-w-1280 margin-tb-20 border-slate">
+
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+
+                        </div>
+
+                        <div class="if_content-panel direction--row align--items-center justify--space-around w-100-perc max-w-1280 margin-tb-20 border-slate">
+
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+                            <div class="flex--1 dot"> </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc">
+
+                        <p class="t-align--l font--s-22">
+                            Function based stylesheets should be given higher specificity than component classes
+                        </p>
+
+                        <div class="if_content-panel direction--column
+                                align--items-center justify--center
+                                w-100-perc
+                                bg-white-01
+                                parent-of-xmp-on-white-1">
+
+<xmp class="html--dark-theme"><head>
+<link rel="stylesheet" type="text/css" href="assets/css/components/component.css"/>
+<link rel="stylesheet" type="text/css" href="assets/css/function-based.css"/>
+</head>
+</xmp>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-860">
+
+                        <p class="t-align--l font--s-24">
+                            Reusable functional classes should be added to existing component based CSS classes in order
+                            to modify presentation.
+                            The 'fight' against specificity is easily solved through
+                            the application of function based classes. The risk of unintended global styling
+                            is reduced, as presentational changes occur within specific areas of the HTML.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- implementation -->
+            <section>
+
+                <section>
+                    <div class="if_content-panel direction--row
+                                align--items-center justify--center
+                                w-100-perc max-w-400">
+
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-center
+                                    justify--center margin-all-40
+                                    min-h-200p bg-light-charcoal
+                                    mdl-shadow--2dp">
+
+                            <span class="font--s-4em color--body icon-front-end front-end-icon-line_style"> </span>
+                        </div>
+
+                    </div>
+
+                    <div class="if_content-panel direction--row
+                                align--items-center justify--space-between
+                                w-100-perc max-w-768">
+
+
+                        <div class="if_content-panel flex--1
+                                    direction--column align--items-center
+                                    justify--center pad-all-10">
+
+                            <p class="t-align--c font--s-26">
+                                Implementation
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+
+                        <p class="t-align--l max-w-768 font--s-26 border-b-2px-white pad-b-10">
+                            How does one implement this approach?
+                        </p>
+                        <p class="t-align--l font--s-20">
+                            There are two answers to this question.
+                        </p>
+
+                        <p class="t-align--l font--s-20">
+                            Firstly, one could copy the functional classes used within this presentation
+                            or duplicate the classes from this <a class="align-self--start margin-t-10" href="http://www.jon.gold/txt/" target="_blank"> website by Jon Gold </a>.
+                        </p>
+
+                        <p class="t-align--l font--s-20">
+                            Secondly, one could author their own function based stylesheet.
+
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--center
+                                w-100-perc
+                                max-w-768
+                                pad-all-30
+                                bg-white-01
+                                border-2-c8
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            Authoring a function based stylesheet
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768 pad-all-30 bg-white-01">
+                        <p class="t-align--l font--s-20">
+                            For every property there is a class.
+                        </p>
+
+                        <p class="t-align--l font--s-20">
+                            For every property value, there is a class.
+                        </p>
+
+                        <p class="t-align--l font--s-20">
+                            A function based stylesheet could contain thousands of classes, with each class being a slight
+                            variation of another. The type and quantity of function based classes within a stylesheet is determined
+                            by the front-end architectural context it is used in.
+
+                        </p>
+
+                    </div>
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--center
+                                w-100-perc
+                                max-w-768
+                                pad-all-30
+                                bg-white-01
+                                border-2-c8
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            Examples of function based classes
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768 pad-all-30 bg-white-01">
+
+                        <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-860 parent-of-xmp-on-white-1">
+
+<xmp class="html--dark-theme">.pos-absolute {
+    position: absolute;
+}
+.pos-fixed {
+    position: fixed;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.max-h-200p {
+    max-height: 200px;
+}
+.max-h-300p {
+    max-height: 300px;
+}
+</xmp>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- extra information -->
+            <section>
+
+                <section>
+                    <div class="if_content-panel direction--row align--items-center justify--space-between w-100-perc">
+
+                        <div class="flex--1">
+                            <img src="assets/images/micromoment.png">
+                        </div>
+
+
+                        <div class="flex--1">
+                            <p class="t-align--l font--s-26">
+                                New UX concept: Micro-Moment
+                            </p>
+                            <p class="t-align--l font--s-20">
+                                UX design was born from the need to capture and keep users’ attention.
+                            </p>
+                            <p class="t-align--l font--s-20">
+                                Designers fall short when they focus only on big picture features and functionality.
+                                The key to optimizing the user experience is found in the smallest consumer actions: micro-moments.
+                            </p>
+
+                            <p> <a href="https://blogs.adobe.com/creativecloud/how-the-micro-moment-is-changing-ux-design/" target="_blank">Adobe</a> - April 6 2017 </p>
+
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- W3C -->
+                <section>
+
+                    <div class="if_content-panel
+                                direction--column
+                                align--items-center
+                                justify--center
+                                w-100-perc
+                                pad-all-30
+                                bg-brand-blue
+                                color--white">
+
+                        <p class="font--s-18 margin-none">
+                            The W3C Plan for CSS Development in 2017
+                        </p>
+                    </div>
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc pad-all-30 bg-white-01">
+
+                        <img src="assets/images/snapshot.jpg">
+
+                    </div>
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+                        <p class="t-align--c font--s-26">
+                            Interesting trend -> external project
+                        </p>
+                        <a class="font--s-20" href="http://stackoverflow.com/questions/42044026/design-css-class-names-content-based-vs-function-based">stack overflow</a>
+                    </div>
+
+
+                </section>
+
+                <section>
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc max-w-768">
+                        <p class="t-align--c font--s-26">
+                            A Belgium website that was authored in 2016
+                        </p>
+                        <a class="font--s-20" href="https://www.ikdoeict.be/apps/leercentrum/courses/ws2-cws-course-materials/04_moderncss.html#/">www.ikdoeict.be</a>
+                    </div>
+
+
+                </section>
+
+                <section>
+
+
+                    <div class="if_content-panel direction--column align--items-center justify--center w-100-perc bg-white-01 pad-tb-20-40 pad-lr-40">
+
+                        <p class="t-align--l font--s-26 border-b-2px-white pad-b-10">References</p>
+
+                        <a class="align-self--start margin-t-10" href="http://hakim.se/" target="_blank">Hakim El Hattab - Swedish front end developer </a>
+                        <a class="align-self--start margin-t-10" href="http://www.jon.gold/txt/" target="_blank">Functional CSS article - Jon Gold 2015 </a>
+                        <a class="align-self--start margin-t-10" href="http://www.apppie.org/pages/approach/components.html" target="_blank">Components Approach - Apple Pie</a>
+                        <a class="align-self--start margin-t-10" href="https://github.com/stubbornella/oocss/wiki" target="_blank">Object Oriented CSS - Stubbornella OOCSS Wiki</a>
+                        <a class="align-self--start margin-t-10" href="http://www.w3schools.com/w3css/tryw3css_templates_band.htm" target="_blank">w3schools - Webpage Template</a>
+                        <a class="align-self--start margin-t-10" href="https://github.com/ampproject/amphtml" target="_blank">AMP HTML</a>
+                        <a class="align-self--start margin-t-10" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Visual_formatting_model" target="_blank">Visual Formatting Model - Mozilla</a>
+                        <a class="align-self--start margin-t-10" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_mode" target="_blank">Layout Mode - Mozilla</a>
+                        <a class="align-self--start margin-t-10" href="https://www.w3.org/TR/2007/WD-css3-box-20070809/" target="_blank">Box model - Mozilla</a>
+                        <a class="align-self--start margin-t-10" href="https://www.w3.org/TR/REC-CSS2/intro.html" target="_blank">CSS design principles - W3C</a>
+                        <a class="align-self--start margin-t-10" href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/" target="_blank"> Nicolas Gallagher </a>
+
+                    </div>
+                </section>
+
+            </section>
+
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/reveal.min.js"></script>
+<script>
+    Reveal.initialize({
+        controls: true,
+        center: true,
+        overview: true,
+        theme: Reveal.getQueryHash().theme,
+        transition: Reveal.getQueryHash().transition || 'cube'
+    });
+</script>
+
+</body>
+</html>

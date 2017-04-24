@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML focused front-end methodology">
+
+    <title>Containing Block</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- typography -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/robotodraft.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/droid-sans-monoregular.css"/>
+
+    <!-- initial base -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendor/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/restart.css"/>
+
+    <link rel="stylesheet" type="text/css" href="../../assets/css2/utilities.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2/components.css">
+
+    <link rel="stylesheet" type="text/css" href="../../assets/css3/block.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css3/modifier.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css3/utility.css">
+
+    <!-- components -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/components/box-model.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/components/cssr.css"/>
+
+    <!-- naming pattern -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/block.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/modifier.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/utility.css"/>
+
+
+
+    <!-- media queries -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/media-queries.css"/>
+
+    <!-- modernizr -->
+    <script src="../../assets/js/modernizr.js"></script>
+
+</head>
+<body class="bg-34495e line-height-1">
+
+    <div class="ib_base-wrapper no-padding">
+        <div class="block_mid-container overflow-hide max-w-560">
+
+            <p class="if_content-panel direction--column pad-tb-50-0 w-100-perc">
+                <span class="font--s-2em color--white t-align--l">Visual Formatting Model</span>
+            </p>
+
+            <div class="flex_content-panel direction--column align--flex-start justify--flex-start w-100-perc">
+                <p class="if_content-panel direction--column w-100-perc">
+                    <span class="font--s-18 color--white t-align--l margin-tb-20">A containing block</span>
+                </p>
+                <div class="flex_content-panel direction--row align--flex-start justify--flex-start w-100-perc pad-tb-40 max-w-90p">
+
+                    <div class="border_box-model iblock-section w-100-perc border-2-magenta pad-all-5">
+                        <div class="content_box-model iblock-section max-w-50perc pad-all-10 fl border-2-magenta">
+                            <p class="text-center"> </p>
+                        </div>
+                        <div class="border_box-model iblock-section max-w-50perc pad-all-10 fl border-2-magenta">
+                            <p class="text-center"> </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="if_content-panel direction--column pad-tb-40 w-100-perc">
+
+                <p class="if_content-panel margin-b-40 color--white line-height-1_5">
+                    The visual formatting model transforms an element of a Web document into
+                    a box.  Various properties can be added to the box in order for it to
+                    act as a robust base for other boxes.
+                </p>
+                <p class="if_content-panel margin-b-40 color--white line-height-1_5">
+                    The W3C documentation demonstrate that the behaviour of child elements are
+                    easier to control if particular properties of the containing block
+                    are declared. Using a combination of box-sizing, layout mode
+                    and a positioning scheme, we find that child elements align and structure
+                    themselves in particular configurations depending on the type
+                    of layout mode, positioning scheme and box model.
+                </p>
+                <p class="if_content-panel margin-b-40 color--white line-height-1_5">
+                    The combination of all three properties set a particular
+                    structural context for the child elements to interact within.
+                </p>
+                <p class="if_content-panel margin-b-40 color--white line-height-1_5">
+                    Layout mode, positioning scheme and box model are not tangible
+                    presentational properties. In order to visualise these properties,
+                    the :before pseudo element of three different classes, have been assigned
+                    one of the three properties in combination with a particular background color
+                    in order for the audience to confirm the existence of the non tangible property.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="ib_base-wrapper">
+        <div class="block_mid-container max-w-560">
+            <div class="ib_content-panel pad-tb-20-40 w-100-perc cssr-canvas">
+
+
+<xmp class="color--cyan no-padding font--s-16">
+.border-box-model,
+.border-box-model *,
+.border-box-model *:before,
+.border-box-model *:after {
+    box-sizing: border-box;
+}
+
+.border-box-model:before {
+    content: '';
+    background-color: rgba(255, 1, 67, 0.6);
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate(-0, -50%);
+    border-radius: 10px;
+}
+</xmp>
+
+
+<xmp class="color--cyan no-padding margin-t-100"><p class="border-box-model"></p></xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-box-model border-next-element">
+    <p class="border-box-model">   </p>
+</div>
+
+<xmp class="color--cyan no-padding"><div class="border-box-model"></div></xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-box-model border-next-element">
+    <div class="border-box-model">   </div>
+</div>
+
+<xmp class="color--cyan no-padding"><i class="border-box-model"></i></xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-box-model border-next-element">
+    <i class="border-box-model">   </i>
+</div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="ib_base-wrapper">
+        <div class="block_mid-container max-w-560">
+            <div class="ib_content-panel pad-tb-20-40 w-100-perc cssr-canvas">
+
+<xmp class="color--cyan no-padding font--s-16 pad-tb-10">
+.position-relative {
+    position: relative;
+}
+
+.position-relative:before {
+    content: '';
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate(-0, -50%);
+}
+</xmp>
+
+<xmp class="color--cyan no-padding margin-t-100"><p class="position-relative"></p></xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-next-element">
+    <p class="position-relative">   </p>
+</div>
+
+<xmp class="color--cyan no-padding"><div class="position-relative"></div></xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-next-element">
+    <div class="position-relative">   </div>
+</div>
+
+<xmp class="color--cyan no-padding"><i class="position-relative"></i></xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-next-element">
+    <i class="position-relative">   </i>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="ib_base-wrapper">
+        <div class="block_mid-container max-w-560">
+            <div class="ib_content-panel pad-tb-20-40 w-100-perc cssr-canvas">
+
+
+<xmp class="color--cyan font--s-16 pad-tb-10">
+.display-inline-block {
+    display: inline-block;
+}
+
+.display-inline-block:before {
+    content: '';
+    background-color: rgba(229, 144, 73, 0.6);
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate(-0, -50%);
+}
+</xmp>
+
+<xmp class="color--cyan no-padding margin-t-100">.display-flex { }</xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-next-element">
+    <div class="display-flex">   </div>
+</div>
+
+<xmp class="color--cyan no-padding">.display-inline-flex { }</xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-next-element">
+    <div class="display-inline-flex">   </div>
+</div>
+
+<xmp class="color--cyan no-padding">.display-block { }</xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-next-element">
+    <div class="display-block">   </div>
+</div>
+
+<xmp class="color--cyan no-padding">.display-inline-block { }</xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-next-element">
+    <div class="display-inline-block">   </div>
+</div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="ib_base-wrapper">
+        <div class="block_mid-container max-w-560">
+            <div class="ib_content-panel pad-tb-20-40 w-100-perc cssr-canvas">
+
+
+<xmp class="color--cyan no-padding margin-b-30 font--s-16">
+A block level box as a .containing-block { }
+</xmp>
+
+<xmp class="color--cyan no-padding font--s-16 margin-t-20">.containing-block {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+}
+</xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-next-element">
+    <div class="border-box-model position-relative display-flex w-100-perc">   </div>
+</div>
+
+<xmp class="color--cyan no-padding font--s-16 margin-t-20">.containing-block {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+}
+</xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-next-element">
+    <div class="border-box-model position-relative display-inline-flex w-100-perc">   </div>
+</div>
+
+<xmp class="color--cyan no-padding font--s-16 margin-t-20">.containing-block {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+}
+</xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-next-element">
+    <div class="border-box-model position-relative display-block w-100-perc">   </div>
+</div>
+
+<xmp class="color--cyan no-padding font--s-16 margin-t-20">.containing-block {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+</xmp>
+<div class="w-100-perc max-w-560 border-1-fff contain-relative border-next-element">
+    <div class="border-box-model position-relative display-inline-block w-100-perc">   </div>
+</div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>

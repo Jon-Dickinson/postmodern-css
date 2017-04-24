@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML focused front-end methodology">
+
+    <title> A System of Elements | CSSR</title>
+
+    <!-- initial base -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendor/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/restart.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/framework.css"/>
+
+    <!-- typography -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/robotodraft.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/droid-sans-monoregular.css"/>
+
+    <!-- naming pattern -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/block.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/modifier.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/utility.css"/>
+
+    <!-- data attributes -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/data-attributes.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/icons.css"/>
+
+    <link rel="stylesheet" href="../../assets/css/components/3d.css">
+
+    <!-- media queries -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/media-queries.css"/>
+
+    <!-- modernizr -->
+    <script src="../../assets/js/modernizr.js"></script>
+
+</head>
+<body class="bg-white overflow-y-scr">
+
+<div class="if_base-wrapper">
+    <div class="flex_mid-container max-w-768">
+        <div class="if_content-panel direction--column w-100-perc">
+            <h2 class="t-align--c">
+                A System of Elements
+            </h2>
+        </div>
+    </div>
+</div>
+
+<div class="ib_base-wrapper no-padding">
+    <div class="block_mid-container max-w-1200">
+        <div class="if_content-panel justify--center align--items-center margin-b-40 w-100-perc">
+            <button id="start-button-A" class="btn margin-all-10">start</button>
+            <button id="reset-button-A" class="btn margin-all-10">reset</button>
+        </div>
+        <div class="ib_content-panel w-100-perc">
+            <div class="flex_content-panel justify--center align--items-center">
+                <div class="ball-container">
+                    <div id="push-ball-a" class="push-strip-horizontal-a"></div>
+                    <div class="side-square-a"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ib_base-wrapper no-padding">
+    <div class="block_mid-container max-w-1200">
+        <div class="if_content-panel justify--center align--items-center margin-b-40 w-100-perc">
+            <button id="start-button-B" class="btn margin-all-10">start</button>
+            <button id="reset-button-B" class="btn margin-all-10">reset</button>
+        </div>
+        <div class="ib_content-panel w-100-perc">
+            <div class="flex_content-panel justify--center align--items-center">
+                <div class="ball-container">
+
+                    <div id="side-square-b" class="side-square-b"></div>
+                    <div id="push-ball-b" class="push-strip-horizontal-b"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+var startA = document.getElementById('start-button-A');
+var resetA = document.getElementById('reset-button-A');
+var growLeft = document.getElementById('push-ball-a');
+
+    startA.onclick = function() {
+        growLeft.style.width = '406px';
+    };
+
+    resetA.onclick = function() {
+        growLeft.style.width = '80px';
+    };
+
+
+var startB = document.getElementById('start-button-B');
+var resetB = document.getElementById('reset-button-B');
+var moveLeftSmall = document.getElementById('push-ball-b');
+var moveLeftLarge = document.getElementById('side-square-b');
+
+    startB.onclick = function() {
+        moveLeftSmall.style.display = 'block';
+        moveLeftSmall.style.float = 'left';
+    };
+
+    resetB.onclick = function() {
+        moveLeftSmall.style.display = 'inline-block';
+        moveLeftSmall.style.float = 'none';
+    };
+
+</script>
+
+</body>
+</html>

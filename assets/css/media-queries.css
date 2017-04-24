@@ -1,0 +1,26 @@
+
+@media screen and (max-width: 640px) {
+
+  [class*="base-wrapper"] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .controls {
+    max-width: 100%;
+  }
+
+  .play-container {
+    min-height: 610px;
+
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  [mq-640--full-width] {
+    width: 100%;
+  }
+
+}
+

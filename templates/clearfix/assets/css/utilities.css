@@ -1,0 +1,105 @@
+/*! utility classes intended for global use */
+
+
+/*  margins
+ ********************************************/
+
+.margin-tb-25 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.margin-x-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin-b-70p {
+  margin-bottom: 70px;
+}
+
+/*  padding
+ ********************************************/
+
+.pad-15-0 {
+  padding: 15px 0;
+}
+
+.pad-0-20 {
+  padding: 0 20px;
+}
+
+/*  widths
+ ********************************************/
+
+.w-100perc {
+  width: 100%;
+}
+
+/*  max-widths
+ ********************************************/
+
+.max-w-768 {
+  max-width: 768px;
+}
+
+.max-w-520 {
+  max-width: 520px;
+}
+
+.max-w-560 {
+  max-width: 560px;
+}
+
+/*  borders
+ ********************************************/
+
+.border-2-magenta {
+  border: 2px solid magenta;
+}
+
+.border-2-cyan {
+  border: 2px solid #01B0F0;
+}
+
+/*  backgrounds
+ ********************************************/
+
+.bg-d8 {
+  background-color: #d8d8d8;
+}
+
+/*  positioning
+ ********************************************/
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*  typography
+ ********************************************/
+
+p {
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-s-28p {
+  font-size: 28px;
+}
+
+
+.font-s-15p {
+  font-size: 15px;
+}
+
+.color--white {
+  color: #ffffff;
+}

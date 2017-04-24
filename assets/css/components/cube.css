@@ -1,0 +1,87 @@
+/* the selector path required a specific class combination to avoid global styling */
+.isolate {
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block !important;
+  margin: auto;
+  width: 380px;
+  height: 380px;
+}
+
+.isolate .viewport {
+  display: block !important;
+  height: 380px;
+  left: 50%;
+  margin: 0;
+  perspective: 720px;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) translateZ(0px);
+  transform-style: preserve-3d;
+  width: 380px;
+  z-index: 2000;
+}
+
+.isolate .viewport .cube {
+  display: inline-block;
+  height: 100%;
+  margin: 0;
+  max-height: 200px;
+  max-width: 200px;
+  padding: 0;
+  position: relative;
+
+  transform: rotateX(-40deg) rotateY(-51deg);
+  transform-style: preserve-3d;
+  width: 100%;
+  z-index: 300;
+}
+
+.isolate .viewport .cube .first-side,
+.isolate .viewport .cube .second-side,
+.isolate .viewport .cube .third-side,
+.isolate .viewport .cube .fourth-side,
+.isolate .viewport .cube .fifth-side,
+.isolate .viewport .cube .sixth-side {
+  backface-visibility: visible;
+  background-color: rgba(17, 141, 249, 0.2);
+  border: 2px solid rgba(17, 141, 249, 0.75);
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translate3d(0px, 0px, 0px);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+
+.isolate .viewport .cube .first-side {
+  transform: rotateX(90deg) translateZ(130px);
+}
+
+.isolate .viewport .cube .second-side {
+  transform: rotateX(0deg) translateZ(130px);
+}
+
+.isolate .viewport .cube .third-side {
+  transform: rotateY(90deg) translateZ(130px);
+}
+
+.isolate .viewport .cube .fourth-side {
+  transform: rotateY(180deg) translateZ(130px);
+}
+
+.isolate .viewport .cube .fifth-side {
+  transform: rotateY(-90deg) translateZ(130px);
+}
+
+.isolate .viewport .cube .sixth-side {
+  transform: rotateX(-90deg) rotate(180deg) translateZ(130px);
+}
+
+.isolate .viewport .cube div:hover {
+  background-color: rgba(17, 141, 249, 0.3);
+  border: 1px solid rgba(17, 141, 249, 0.85);
+}

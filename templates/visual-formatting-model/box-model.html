@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML focused front-end methodology">
+
+    <title>Comparison of Box Models</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../../assets/css/vendor/normalize.css">
+    <link rel="stylesheet" href="../../assets/css/components/box-model.css">
+
+    <link rel="stylesheet" href="../../assets/css2/utilities.css">
+    <link rel="stylesheet" href="../../assets/css2/components.css">
+
+    <link rel="stylesheet" href="../../assets/css3/block.css">
+    <link rel="stylesheet" href="../../assets/css3/modifier.css">
+    <link rel="stylesheet" href="../../assets/css3/utility.css">
+
+    <script src="../../assets/js/modernizr.js"></script>
+</head>
+<body class="bg-34495e comparison-box-model">
+
+    <main class="w-100perc margin-x-auto max-w-560 pad-0-20">
+
+
+        <div class="iblock-section pad-15-0 margin-tb-50">
+            <p class="font--s-24 t-align--c">
+                Content Box Model, Border Box Model <br>
+                <span class="font--s-14">and</span> <br>
+                Clearfix Hack
+            </p>
+        </div>
+
+        <div class="iblock-section pad-15-0">
+            <p class="border-2-cyan bg-cyan pad-all-10">Content box model</p>
+        </div>
+
+        <div class="iblock-section pad-15-0">
+            <p class="border-2-magenta bg-magenta pad-all-10">Border box-model</p>
+        </div>
+
+
+
+
+        <div class="iblock-section pad-15-0 margin-t-100">
+            <p class="font--s-24">Border box (block) + (inline) parent using clearfix</p>
+        </div>
+
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Border Box (block) + [CF]</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="border_box-model block-section w-100-perc border-2-magenta pad-all-5 cf">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="border_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Border Box (block) + [CF]</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="border_box-model block-section w-100-perc border-2-magenta pad-all-5 cf">
+            <div class="content_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> block </p>
+            </div>
+            <div class="border_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Border Box (inline) + [CF]</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="border_box-model inline-section w-100-perc border-2-magenta pad-all-5 cf">
+            <div class="content_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> block </p>
+            </div>
+            <div class="border_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Border Box (inline)</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="border_box-model inline-section w-100-perc border-2-magenta pad-all-5">
+            <div class="content_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> block </p>
+            </div>
+            <div class="border_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> block </p>
+            </div>
+        </div>
+
+
+
+
+        <div class="iblock-section pad-15-0 margin-t-100">
+            <p class="font--s-24">Content box (block) parent using clearfix</p>
+        </div>
+
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box (block) + [CF]</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="content_box-model block-section w-100-perc border-2-cyan pad-all-5 cf">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="border_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box (block) + [CF]</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="content_box-model block-section w-100-perc border-2-cyan pad-all-5 cf">
+            <div class="content_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> block </p>
+            </div>
+            <div class="border_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> block </p>
+            </div>
+        </div>
+
+
+
+
+        <div class="iblock-section pad-15-0 margin-t-100">
+            <p class="font--s-24">Content box (block) parent excluding clearfix</p>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box (block)</p>
+            <p>Content Box + Content Box</p>
+        </div>
+
+        <div class="content_box-model block-section w-100-perc border-2-cyan pad-all-5">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box (block)</p>
+            <p>Content Box + Content Box</p>
+        </div>
+
+        <div class="content_box-model block-section w-100-perc border-2-cyan pad-all-5">
+            <div class="content_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> block </p>
+            </div>
+            <div class="content_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box (block)</p>
+            <p>Content Box + Content Box</p>
+        </div>
+
+        <div class="content_box-model block-section w-100-perc border-2-cyan pad-all-5">
+            <div class="content_box-model block-section max-w-50perc bg-d8 fl border-2-cyan">
+                <p class="text-center"> block </p>
+            </div>
+            <div class="content_box-model block-section max-w-50perc bg-d8 fl border-2-cyan">
+                <p class="text-center"> block </p>
+            </div>
+        </div>
+
+
+
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box (block)</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="content_box-model block-section w-100-perc border-2-cyan pad-all-5">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="border_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box (block)</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="content_box-model block-section w-100-perc border-2-cyan pad-all-5">
+            <div class="content_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> block </p>
+            </div>
+            <div class="border_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> block </p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="iblock-section pad-15-0 margin-t-100">
+            <p class="font--s-24">Border box (inline-block) parent excluding clearfix</p>
+        </div>
+
+
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Border Box (inline-block)</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="border_box-model iblock-section w-100-perc border-2-magenta pad-all-5 cf">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="border_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Border Box (inline-block)</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="border_box-model iblock-section w-100-perc border-2-magenta pad-all-5 cf">
+            <div class="content_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> block </p>
+            </div>
+            <div class="border_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> block </p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="iblock-section pad-15-0 margin-t-100">
+            <p class="font--s-24">Content box (inline-block) parent excluding clearfix</p>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box (inline-block)</p>
+            <p>Content Box + Content Box</p>
+        </div>
+
+        <div class="content_box-model iblock-section w-100-perc border-2-cyan pad-all-5">
+            <div class="content_box-model iblock-section max-w-50perc bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="content_box-model iblock-section max-w-50perc bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box (inline-block)</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="content_box-model iblock-section w-100-perc border-2-cyan pad-all-5 cf">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="border_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box (inline-block)</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="content_box-model iblock-section w-100-perc border-2-cyan pad-all-5 cf">
+            <div class="content_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> block </p>
+            </div>
+            <div class="border_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> block </p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="iblock-section pad-15-0 margin-t-100">
+            <p class="font--s-24">Various combinations of Content and Border Box ..</p>
+        </div>
+
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="w-100-perc border-2-cyan pad-all-5">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="border_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box + [CF]</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="content_box-model w-100-perc border-2-cyan pad-all-5 cf">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="border_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box (block) + [CF]</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="content_box-model block-section w-100-perc border-2-cyan pad-all-5 cf">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="border_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Content Box (inline-block)</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="content_box-model iblock-section w-100-perc border-2-cyan pad-all-5">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="border_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Border Box (inline-block)</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="border_box-model iblock-section w-100-perc border-2-magenta pad-all-5">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="border_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Border Box (inline-block)</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="border_box-model iblock-section w-100-perc border-2-magenta pad-all-5">
+            <div class="content_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> block </p>
+            </div>
+            <div class="border_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> block </p>
+            </div>
+        </div>
+
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Border Box (block)</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="border_box-model block-section w-100-perc border-2-magenta pad-all-5">
+            <div class="content_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> block </p>
+            </div>
+            <div class="border_box-model block-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> block </p>
+            </div>
+        </div>
+
+
+
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Border Box (block)</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="border_box-model block-section w-100-perc border-2-magenta pad-all-5">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="border_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Border Box (block) + [CF]</p>
+            <p>Content Box + Border Box</p>
+        </div>
+
+        <div class="border_box-model block-section w-100-perc border-2-magenta pad-all-5 cf">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-cyan">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="border_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+
+        <div class="iblock-section pad-15-0 margin-t-100">
+            <p class="font--s-24">
+                The most robust structural combination within the CSS level 2 domain
+                that does not require the use of the Clearfix Hack.</p>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-tb-40-10">
+            <p>Border Box (inline-block)</p>
+            <p>Border Box + Border Box</p>
+        </div>
+
+        <div class="border_box-model iblock-section w-100-perc border-2-magenta pad-all-5">
+            <div class="content_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+            <div class="border_box-model iblock-section max-w-50perc pad-all-20 bg-d8 fl border-2-magenta">
+                <p class="text-center"> inline-block </p>
+            </div>
+        </div>
+
+        <div class="iblock-section pad-15-0 margin-t-100">
+            <p class="font--s-24"> </p>
+        </div>
+
+    </main>
+
+</body>
+</html>

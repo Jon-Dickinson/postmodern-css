@@ -1,0 +1,101 @@
+/* **************************************************
+ *
+ *        initial styling after Normalize.css
+ *
+ */
+
+button,
+input {
+  overflow: hidden;
+  outline: 0;
+  box-shadow: none;
+}
+
+:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ol {
+  list-style: lower-latin;
+}
+
+ul,
+ol {
+  margin-left: 20px;
+  width: calc(100% - 20px) !important;
+}
+
+ul li,
+ol li {
+  padding-left: 15px;
+  line-height: 2.25;
+}
+
+small {
+  font-size: 75%;
+}
+
+time {
+  font-size: 75%;
+}
+
+html [overflow-x-h] {
+  overflow-x: hidden;
+}
+
+html [overflow-y-h] {
+  overflow-y: hidden;
+}
+
+pre::-moz-selection {
+  color: #f2f2f2 !important;
+  background-color: #FF07FE !important;
+}
+
+pre::selection {
+  color: #f2f2f2 !important;
+  background-color: #FF07FE !important;
+}
+
+xmp::-moz-selection {
+  color: #ffffff !important;
+  background-color: #FF07FE !important;
+}
+
+xmp::selection {
+  color: #ffffff !important;
+  background-color: #FF07FE !important;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+::-webkit-input-placeholder {
+  color: #FFFFFF !important;
+}
+
+:-ms-input-placeholder {
+  color: #FFFFFF !important;
+}
+
+input::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+input::-moz-placeholder {
+  color: #FFFFFF;
+}
+
+input:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+}
