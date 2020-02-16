@@ -1,5 +1,12 @@
 # 3D Presentation
 
+```
+Escape key for zoomed out view
+```
+```
+Direction keys to flip cube
+```
+
 ![screenshot](https://raw.githubusercontent.com/Jon-Dickinson/postmodern-css/master/assets/images/screenshot.png)
 
 ## The past, present and future of CSS
